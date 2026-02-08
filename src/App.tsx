@@ -1,9 +1,9 @@
 import React from 'react'
-import Background from './layout/background'
+import Background from './layout/background/Background'
 
 export default function App() {
   return (
-    <div className='margin:0, padding:0'>
+    <div >
       <Background/>
     </div>
   )

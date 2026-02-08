@@ -1,0 +1,4 @@
+.background-image {
+  background-size: cover; /* Scale to cover entire screen */
+  border: 1px solid red;
+}
