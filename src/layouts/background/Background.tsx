@@ -1,4 +1,4 @@
-import background from "./../assets/bg.jpg";
+import background from "./../../assets/bg.jpg";
 import "./Background.css"
 
 export default function Background() {
