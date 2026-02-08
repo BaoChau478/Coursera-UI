@@ -1,5 +1,6 @@
 import Header from './components/layouts/header/Header'
-import Background from './layout/Background'
+import Background from './layouts/background/Background'
+
 
 export default function App() {
   return (
