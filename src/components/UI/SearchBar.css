@@ -1,0 +1,61 @@
+/* Container bao ngoài */
+.search-box-wrapper {
+    position: relative;
+    width: 100%;
+    z-index: 30;
+}
+
+/* Media query cho md:w-96 (Màn hình > 768px thì rộng 384px) */
+@media (min-width: 768px) {
+    .search-box-wrapper {
+        width: 384px; /* tương đương w-96 */
+    }
+}
+
+/* Icon tìm kiếm */
+.search-icon {
+    position: absolute;
+    left: 1rem; /* left-4 */
+    /* top-3 trong tailwind khoảng 12px. 
+       Tuy nhiên dùng top 50% + translate sẽ căn giữa chuẩn hơn bất kể chiều cao input */
+    top: 50%; 
+    transform: translateY(-50%);
+    color: #94a3b8; /* text-slate-400 */
+    pointer-events: none; /* Giúp click vào icon vẫn focus vào input */
+}
+
+/* Ô nhập liệu (Input) */
+.search-input {
+    width: 100%;
+    padding-left: 2.5rem;  /* pl-10 (chừa chỗ cho icon) */
+    padding-right: 1rem;   /* pr-4 */
+    padding-top: 0.625rem; /* py-2.5 */
+    padding-bottom: 0.625rem;
+    
+    /* bg-green/10 - Màu xanh lá nhạt */
+    background-color: rgba(34, 197, 94, 0.1); 
+    
+    /* border-white/10 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    border-radius: 9999px; /* rounded-full */
+    color: #ffffff; /* text-white */
+    outline: none; /* outline-none */
+    
+    /* transition-all */
+    transition: all 0.3s ease;
+}
+
+/* Placeholder text */
+.search-input::placeholder {
+    color: #64748b; /* placeholder:text-slate-500 */
+}
+
+/* Trạng thái khi bấm vào (Focus) */
+.search-input:focus {
+    /* focus:border-primary/50 - Giả sử màu primary là xanh lá giống bg */
+    border-color: rgba(34, 197, 94, 0.5); 
+    
+    /* focus:bg-white/20 */
+    background-color: rgba(255, 255, 255, 0.2);
+}
